@@ -10,7 +10,21 @@
       "Base",
     ],
   },
+  "packages": [
+    {
+      "kind": "local",
+      "path": "IpsumPackages",
+    }, {
+      "kind": "remote",
+      "repository": "https://github.com/pointfreeco/swift-dependencies.git",
+      "version": {
+        "version": "1.17.2",
+      },
+    },
+  ],
   "files": [
+    { "path": "Info.plist" },
+    { "path": "IpsumPackages" },
     { "kind": "folder", "path": "SwiftDependenciesExample", "target-membership": [ "SwiftDependenciesExample" ] },
     { "kind": "folder", "path": "SwiftDependenciesExampleTests", "target-membership": [ "SwiftDependenciesExampleTests" ] },
     { "kind": "folder", "path": "SwiftDependenciesExampleUITests", "target-membership": [ "SwiftDependenciesExampleUITests" ] },
@@ -35,6 +49,40 @@
         "frameworks",
         "resources",
       ],
+      "package-product-members": [
+        {
+          "product-name": "BeerFeature",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "CoffeeFeature",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "IpsumDatabase",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "IpsumDependencies",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "IpsumModels",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "IpsumRepositoryLive",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "LoremFeature",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "PirateFeature",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "product-name": "SpaceFeature",
+          "build-phase": { "build-phase": "frameworks" },
+        }, {
+          "package": "swift-dependencies",
+          "product-name": "Dependencies",
+          "build-phase": { "build-phase": "frameworks" },
+        },
+      ],
       "build-settings": {
         "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
         "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
@@ -43,6 +91,7 @@
         "DEVELOPMENT_TEAM": "47XJPT5882",
         "ENABLE_PREVIEWS": "YES",
         "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "Info.plist",
         "INFOPLIST_KEY_UIApplicationSceneManifest_Generation": "YES",
         "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
         "INFOPLIST_KEY_UILaunchScreen_Generation": "YES",
